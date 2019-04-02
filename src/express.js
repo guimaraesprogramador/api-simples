@@ -8,7 +8,6 @@ const ip = 'localhost'
   const server =  http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/html'});
     res.write("<h3> numero de  visitantes:"+adiconar_visitantes()+"</h3>");
-    res.write(button);
     res.end();
   });
   server.listen(port,ip,()=>{
