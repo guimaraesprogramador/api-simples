@@ -6,9 +6,11 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="../src/express.js"></script>
+    <script src="../src/cliente.js"></script>
 </head>
-<body>
-    
+<body ng-app="app" ng-controller="api">
+    <input type="submit" ng-click="contar()" />
 </body>
 </html>

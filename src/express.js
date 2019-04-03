@@ -1,5 +1,10 @@
-
-    var resquest = require("request");
+var app  = angular.module('app',['servico']);
+app.controller("api",["scope","api_contador",function($scope,api_contador){
+$scope.contar = function(){
+  api_contador.aumentar();
+}
+}]);
+    /*var resquest = require("request");
     var http = require('http');
     const port = 8000
 const ip = 'localhost'
@@ -15,7 +20,7 @@ const ip = 'localhost'
   console.log('Para derrubar o servidor: ctrl + c');
   })
    function adiconar_visitantes(){
-     resquest("https://api.countapi.xyz/update/c5068a21-202b-4def-9261-872ebdea964a?amount=1",function(erro,respost,body){
+     resquest("",function(erro,respost,body){
       visitantes = JSON.parse( body);
       
       });
@@ -38,5 +43,5 @@ const ip = 'localhost'
 
   }
   module.exports = zerar;
-   
+   */
 
