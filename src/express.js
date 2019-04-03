@@ -1,7 +1,12 @@
-var app  = angular.module('app',['servico']);
-app.controller("api",["scope","api_contador",function($scope,api_contador){
-$scope.contar = function(){
+var app  = angular.module('app',['servico'])
+app.controller("api",["$scope","api_contador",function($scope,api_contador){
+  $scope.numero = null;
+$scope.contar = function()
+{
   api_contador.aumentar();
+}
+$scope.zerar = function(){
+api_contador.zerando();
 }
 }]);
     /*var resquest = require("request");
@@ -33,7 +38,7 @@ const ip = 'localhost'
    {
     if(visitantes == undefined)return 0;
     while(visitantes["value"]!=0){
-     resquest("https://api.countapi.xyz/update/c5068a21-202b-4def-9261-872ebdea964a?amount=-1"+visitantes,function(erro,respost,body){
+     resquest(""+visitantes,function(erro,respost,body){
        visitantes = JSON.parse( body);
        
        });
