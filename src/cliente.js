@@ -35,6 +35,9 @@ apps.factory("api_contador",function($http){
       while(x>0){
         x =  await $http.get("https://api.countapi.xyz/update/c5068a21-202b-4def-9261-872ebdea964a?amount=-1")
         .then(function(resp){
+            if(resp.data.value >0){
+                document.getElementById("values").innerText = resp.data.value;
+            }
           return resp.data.value;
         },function(error){
             console.log(error);
